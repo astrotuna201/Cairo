@@ -8,6 +8,7 @@
 
 #import "CairoTest.h"
 #import <cairo/cairo.h>
+#import <cairo/cairo-svg.h>
 
 @implementation CairoTest
 

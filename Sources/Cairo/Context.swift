@@ -64,7 +64,7 @@ public final class Context {
     /// This group functionality can be convenient for performing intermediate compositing. 
     /// One common use of a group is to render objects as opaque within the group, 
     /// (so that they occlude each other), and then blend the result with translucence onto the destination.
-    public func pushGroup(content: Content? = nil) {
+    public func pushGroup(_ content: Content? = nil) {
         
         if let content = content {
             
@@ -94,12 +94,12 @@ public final class Context {
         cairo_pop_group_to_source(internalPointer)
     }
     
-    public func setSource(color: (red: Double, green: Double, blue: Double)) {
+    public func setSource(_ color: (red: Double, green: Double, blue: Double)) {
         
         cairo_set_source_rgb(internalPointer, color.red, color.green, color.blue)
     }
     
-    public func setSource(color: (red: Double, green: Double, blue: Double, alpha: Double)) {
+    public func setSource(_ color: (red: Double, green: Double, blue: Double, alpha: Double)) {
         
         cairo_set_source_rgba(internalPointer, color.red, color.green, color.blue, color.alpha)
     }
@@ -107,7 +107,7 @@ public final class Context {
     /// A drawing operator that paints the current source using the alpha channel of surface as a mask. 
     /// 
     /// - Note: Opaque areas of `surface` are painted with the source, transparent areas are not painted.
-    public func mask(surface: Surface, at point: (x: Double, y: Double)) {
+    public func mask(_ surface: Surface, at point: (x: Double, y: Double)) {
         
         cairo_mask_surface(internalPointer, surface.internalPointer, point.x, point.y)
     }
@@ -137,7 +137,7 @@ public final class Context {
         cairo_clip_preserve(internalPointer)
     }
     
-    public func paint(alpha: Double? = nil) {
+    public func paint(_ alpha: Double? = nil) {
         
         if let alpha = alpha {
             
@@ -172,7 +172,7 @@ public final class Context {
     ///
     /// This method gives the arc in the direction of increasing angles; see `arcNegative()`
     /// to get the arc in the direction of decreasing angles.
-    public func addArc(center: (x: Double, y: Double), radius: Double, angle: (Double, Double), negative: Bool = false) {
+    public func addArc(_ center: (x: Double, y: Double), radius: Double, angle: (Double, Double), negative: Bool = false) {
         
         if negative {
             
@@ -200,17 +200,17 @@ public final class Context {
         return Path(pathPointer)
     }
     
-    public func setFont(size: Double) {
+    public func setFont(_ size: Double) {
         
         cairo_set_font_size(internalPointer, size)
     }
     
-    public func setFont(face: (family: String, slant: FontSlant, weight: FontWeight)) {
+    public func setFont(_ face: (family: String, slant: FontSlant, weight: FontWeight)) {
         
         cairo_select_font_face(internalPointer, face.family, cairo_font_slant_t(face.slant.rawValue), cairo_font_weight_t(face.weight.rawValue))
     }
     
-    public func setFont(matrix: Matrix) {
+    public func setFont(_ matrix: Matrix) {
         
         var copy = matrix
         
@@ -232,12 +232,12 @@ public final class Context {
         cairo_curve_to(internalPointer, controlPoints.first.x, controlPoints.first.y, controlPoints.second.x, controlPoints.second.y, controlPoints.end.x, controlPoints.end.y)
     }
     
-    public func show(text: String) {
+    public func show(_ text: String) {
         
         cairo_show_text(internalPointer, text)
     }
     
-    public func show(glyph: cairo_glyph_t) {
+    public func show(_ glyph: cairo_glyph_t) {
         
         var copy = glyph
         
