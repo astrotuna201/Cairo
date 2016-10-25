@@ -37,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42044D3E1DBF8E4D0062E1ED /* shim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = shim.h; path = ../../../../../testgithub/Cairo/Xcode/ModuleMaps/CFontConfig/shim.h; sourceTree = "<group>"; };
+		42044D3F1DBF8E560062E1ED /* shim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = shim.h; path = ../../../../../testgithub/Cairo/Xcode/ModuleMaps/CFreeType/shim.h; sourceTree = "<group>"; };
+		42044D401DBF8E5D0062E1ED /* shim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = shim.h; path = ../../../../../testgithub/Cairo/Xcode/ModuleMaps/CCairo/shim.h; sourceTree = "<group>"; };
 		42B84A0A1DBE4F5800E6B461 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		42B84A0B1DBE4F6300E6B461 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		42B84A0C1DBE4F6A00E6B461 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				42B84A0A1DBE4F5800E6B461 /* module.modulemap */,
+				42044D401DBF8E5D0062E1ED /* shim.h */,
 			);
 			path = CCairo;
 			sourceTree = "<group>";
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				42B84A0C1DBE4F6A00E6B461 /* module.modulemap */,
+				42044D3E1DBF8E4D0062E1ED /* shim.h */,
 			);
 			path = CFontConfig;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				42B84A0B1DBE4F6300E6B461 /* module.modulemap */,
+				42044D3F1DBF8E560062E1ED /* shim.h */,
 			);
 			path = CFreeType;
 			sourceTree = "<group>";
